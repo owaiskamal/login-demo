@@ -1,34 +1,46 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ChangePasswordPageComponent } from './change-password-page/change-password-page.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {CheckboxModule} from 'primeng/checkbox';
-import {RadioButtonModule} from 'primeng/radiobutton'
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from "primeng/inputtext";
-import {PasswordModule} from 'primeng/password';
+import { LoginPageComponent } from './login-page/login-page.component';
+   import { ChangePasswordPageComponent } from './change-password-page/change-password-page.component';
+
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
 import {CardModule} from 'primeng/card';
-
+import {FormsModule} from '@angular/forms'
+import { PanelModule } from 'primeng/panel';
+import {DropdownModule} from 'primeng/dropdown';
+import { MessageService } from 'primeng/api';
+import {ToastModule} from 'primeng/toast';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {PasswordModule} from 'primeng/password'
 @NgModule({
   declarations: [
     AppComponent,
+    LoginPageComponent,
     ChangePasswordPageComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    CheckboxModule,
-    RadioButtonModule,
-    ButtonModule,
+
     InputTextModule,
-    PasswordModule,
-    CardModule
+    ButtonModule,
+    TableModule,
+    DialogModule,
+    CardModule,
+    FormsModule,
+    PanelModule,
+    DropdownModule,
+    ToastModule,
+    BrowserAnimationsModule,
+    PasswordModule
+
+
   ],
-  providers: [],
+  providers: [MessageService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
