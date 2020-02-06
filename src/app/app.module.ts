@@ -13,27 +13,38 @@ import {DropdownModule} from 'primeng/dropdown';
 import { MessageService } from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
 import {CheckboxModule} from 'primeng/checkbox';
+
 import {PasswordModule} from 'primeng/password'
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
+
+import { AdminPageComponent } from './admin-page/admin-page.component';
+
+
 import { ResetPasswordPageComponent } from './reset-password-page/reset-password-page.component';
 import { LoginSecuritiesPageComponent } from './login-securities-page/login-securities-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     ChangePasswordPageComponent,
+
+    AdminPageComponent
+
     ResetPasswordPageComponent,
     LoginSecuritiesPageComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     InputTextModule,
     ButtonModule,
     TableModule,
@@ -45,6 +56,7 @@ import { LoginSecuritiesPageComponent } from './login-securities-page/login-secu
     ToastModule,
     BrowserAnimationsModule,
     PasswordModule,
+
     CheckboxModule
 
 

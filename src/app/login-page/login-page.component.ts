@@ -21,6 +21,9 @@ export class LoginPageComponent implements OnInit {
         summary:'Login Successfully',
         detail: 'Welcome User'
       });
+      setTimeout(() => {
+        this.router.navigateByUrl('/admin-page');
+      }, 2000);
   }
   changePassword()
   {
