@@ -1,0 +1,61 @@
+/* sidenav */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background:
+    linear-gradient(to right ,rgba(189, 202, 159, 0.9), rgba(146, 190, 43, 0.9));
+    //url("src/assets/images/img_sidenav.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    //overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 57px;
+
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: white;
+  }
+
+  .side-link :hover{
+    padding: 3px 0;
+    margin-left:5px;
+    font-weight:700;
+    -webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+  }
+
+  /* sidenav */
+  .nav-item a:hover{
+    color: #98c42e;
+  }
+  
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+   // font-size: 28px; /* Increased text to enable scrolling */
+    //padding: 0px 10px;
+  }
+  
+
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+/* footer */
+
+
+// /* footer */linear-gradient(rgba(146, 190, 43, 0.726)),

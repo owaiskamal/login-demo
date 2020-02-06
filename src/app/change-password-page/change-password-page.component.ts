@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./change-password-page.component.scss']
 })
 export class ChangePasswordPageComponent implements OnInit {
+  
+  oldPassword: string;
+  newPassword: string;
+  confirmPassword: string;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+ clear(){
+   this.oldPassword = '';
+   this.newPassword = '';
+   this.confirmPassword = '';
+ }
 }
