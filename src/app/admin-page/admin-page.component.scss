@@ -1,7 +1,7 @@
 /* sidenav */
 .sidenav {
     height: 100%;
-    width: 200px;
+    width: 220px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -24,18 +24,19 @@
     display: block;
   }
   
-  .sidenav a:hover {
+
+  .sub_link :hover{
+    
+    font-weight:700;
+
     color: white;
   }
 
-  .side-link :hover{
-    padding: 3px 0;
-    margin-left:5px;
+ .main_link:hover{
     font-weight:700;
-    -webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
-  }
+
+    color: white;
+ }
 
   /* sidenav */
   .nav-item a:hover{

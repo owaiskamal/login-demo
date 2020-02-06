@@ -35,9 +35,7 @@ import { LoginSecuritiesPageComponent } from './login-securities-page/login-secu
     AppComponent,
     LoginPageComponent,
     ChangePasswordPageComponent,
-
-    AdminPageComponent
-
+    AdminPageComponent,
     ResetPasswordPageComponent,
     LoginSecuritiesPageComponent
 

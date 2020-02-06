@@ -1,40 +1,40 @@
 <div class="sidenav" >
-    <ul class="list-unstyled quick-links side-link">
-      <li><a href="javascript:void();">Home</a></li>
+    <ul class="list-unstyled quick-links">
+      <li class="main_link"><a class="active" href="javascript:void();"><i class="pi pi-home"></i>Home</a></li>
 
-      <li>
-        <a href="#paymentSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed ">
-        <span class="icon"></span>Payment Transaction</a>
+<li class="sub_link">
+        <a href="#paymentSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+            <i class="pi pi-id-card"></i>Payment Transaction</a>
 
-        <ul class="collapse list-unstyled" id="paymentSubmenu">
-            <li><a href="javascript:void();">Create Transaction</a></li>
-            <li><a href="javascript:void();">Bulk Transaction</a></li>
-            
-        </ul>
+        
+</li>
+
+<ul class="collapse list-unstyled" id="paymentSubmenu">
+    <li class="sub_link"><a  href="javascript:void();">Create Transaction</a></li>
+    <li class="sub_link" ><a  href="javascript:void();">Bulk Transaction</a></li>
+    
+</ul>
+
+    <li class="sub_link">
+        <a href="#backSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+            <i class="pi pi-briefcase"></i> Back Office</a>
+
     </li>
+            <ul class="collapse list-unstyled" id="backSubMenu">
+                <li class="sub_link"><a href="javascript:void();">Stop Cheque</a></li>
+                <li class="sub_link"><a href="javascript:void();">CBS Posting</a></li>
+                
+            </ul>
+    <li class="sub_link">
+        <a href="#instrumentSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+            <i class="pi pi-refresh"></i>Instrument Processing</a>
 
-
-
-    <li>
-        <a href="#backSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed ">
-        <span class="icon"></span>Back Office</a>
-
-        <ul class="collapse list-unstyled" id="backSubMenu">
-            <li><a href="javascript:void();">Stop Cheque</a></li>
-            <li><a href="javascript:void();">CBS Posting</a></li>
-            
-        </ul>
     </li>
-    <li>
-        <a href="#instrumentSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed ">
-        <span class="icon"></span>Instrument Processing</a>
-
-        <ul class="collapse list-unstyled" id="instrumentSubMenu">
-            <li><a href="javascript:void();">Instrument Printing</a></li>
-            <li><a href="javascript:void();">Instrument Re-print</a></li>
-            
-        </ul>
-    </li>
+            <ul class="collapse list-unstyled" id="instrumentSubMenu">
+                <li class="sub_link"><a href="javascript:void();">Instrument Printing</a></li>
+                <li class="sub_link"><a href="javascript:void();">Instrument Re-print</a></li>
+                
+            </ul>
   </ul>
   </div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
@@ -49,6 +49,7 @@
   
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
+          
         <li class="nav-item">
           <a class="nav-link" href="javascript:void();">Payments</a>
         </li>
@@ -62,12 +63,27 @@
         <li class="nav-item">
           <a class="nav-link" href="javascript:void();">Vendor</a>
         </li>
+        
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      
+     
+    <ul class="navbar-nav ml-auto navbar-right-top">
+        <form class="form-inline my-2 my-lg-0">
        
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            
+        </form>
+        <li class="nav-item dropdown nav-user mr-sm-2" style="float:right;">
+            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="pi pi-ellipsis-v"></i></a>
+            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                <a class="dropdown-item" href="#"><i class="pi pi-users"></i>Account</a>
+                <a class="dropdown-item"  [routerLink]="['/resetpassword']"><i class="pi pi-user-edit"></i>Setting</a>
+                <a class="dropdown-item"  [routerLink]="['']"><i class="pi pi-sign-out"></i>Logout</a>
+            </div>
+        </li>  
+    </ul>
+
     </div>
     
   </nav>

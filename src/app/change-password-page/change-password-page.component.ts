@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MessageService} from 'primeng/api';
 @Component({
   selector: 'app-change-password-page',
   templateUrl: './change-password-page.component.html',
@@ -11,7 +11,7 @@ export class ChangePasswordPageComponent implements OnInit {
   newPassword: string;
   confirmPassword: string;
 
-  constructor() { }
+  constructor(private messageService :  MessageService) { }
 
   ngOnInit() {
   }
@@ -19,5 +19,13 @@ export class ChangePasswordPageComponent implements OnInit {
    this.oldPassword = '';
    this.newPassword = '';
    this.confirmPassword = '';
+ }
+ updatePassword(){
+  this.messageService.add
+  ({
+    severity:'success',
+    summary:'Password updated Successfully',
+    detail: 'Updated Password'
+  });
  }
 }
