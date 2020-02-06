@@ -34,7 +34,7 @@
               >
               <input
                 type="password"
-                pPassword
+                
                 required
                 name="Password"
                 pInputText
@@ -50,12 +50,26 @@
             <button
               pButton
               type="submit"
+              class="ui-button-success ui-button-rounded"
               (click)="loginUser()"
               label="Submit"
               style="margin-top: 0px;width:100%; font-weight: bold;"
             ></button>
           </div>
         </div>
+        <div class="ui-g">
+            <div class="ui-md-3 ui-lg-3"></div>
+            <div class="ui-md-6 ui-lg-6 ui-sm-12">
+              <button
+                pButton
+                type="submit"
+                class="ui-button-info ui-button-rounded"
+                (click)="changePassword()"
+                label="Change Password"
+                style="margin-top: 0px;width:100%; font-weight: bold;"
+              ></button>
+            </div>
+          </div>
       </form>
     </div>
   </p-card>
