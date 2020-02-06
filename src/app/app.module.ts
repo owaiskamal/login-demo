@@ -13,11 +13,12 @@ import {DropdownModule} from 'primeng/dropdown';
 import { MessageService } from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {PasswordModule} from 'primeng/password';
-import { NgModule } from '@angular/core';
+
+import {PasswordModule} from 'primeng/password'
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [

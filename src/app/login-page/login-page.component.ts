@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MessageService} from 'primeng/api';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -7,7 +8,7 @@ import {MessageService} from 'primeng/api';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private messageService :  MessageService) { }
+  constructor(private messageService :  MessageService , private router : Router) { }
 
   ngOnInit() {
   }
@@ -20,5 +21,9 @@ export class LoginPageComponent implements OnInit {
         summary:'Login Successfully',
         detail: 'Welcome User'
       });
+  }
+  changePassword()
+  {
+    this.router.navigateByUrl('/change-password');
   }
 }
