@@ -1,6 +1,6 @@
 
 import { LoginPageComponent } from './login-page/login-page.component';
-   import { ChangePasswordPageComponent } from './change-password-page/change-password-page.component';
+import { ChangePasswordPageComponent } from './change-password-page/change-password-page.component';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -14,6 +14,10 @@ import { MessageService } from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PasswordModule} from 'primeng/password'
+import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
 @NgModule({
   declarations: [
     AppComponent,
