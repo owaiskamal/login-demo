@@ -23,19 +23,21 @@
     color: white;
     display: block;
   }
-  
+  a.sub_anchs {
+    padding-left: 25px;
+ }
 
   .sub_link :hover{
     
     font-weight:700;
 
-    color: white;
+    background-color: rgba($color: #98c44f, $alpha: 0.5);
   }
 
- .main_link:hover{
+ .main_link :hover{
     font-weight:700;
-
-    color: white;
+   
+    background-color: rgba($color: #98c44f, $alpha: 0.5);
  }
 
   /* sidenav */

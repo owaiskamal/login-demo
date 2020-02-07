@@ -22,11 +22,11 @@ export class LoginPageComponent implements OnInit {
         detail: 'Welcome User'
       });
       setTimeout(() => {
-        this.router.navigateByUrl('/admin-page');
+        this.router.navigateByUrl('/adminpage');
       }, 2000);
   }
   changePassword()
   {
-    this.router.navigateByUrl('/change-password');
+    this.router.navigateByUrl('/changepassword');
   }
 }
