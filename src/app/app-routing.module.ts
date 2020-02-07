@@ -11,9 +11,9 @@ import { LoginSecuritiesPageComponent } from './login-securities-page/login-secu
 
 
 const routes: Routes = [
-  {path: 'change-password',component:ChangePasswordPageComponent},
+  {path: 'changepassword',component:ChangePasswordPageComponent},
   {path: '', component:LoginPageComponent},
-  {path:'admin-page', component:AdminPageComponent},
+  {path:'adminpage', component:AdminPageComponent},
   {path : 'resetpassword' , component : ResetPasswordPageComponent},
   {path: 'loginsettings' , component : LoginSecuritiesPageComponent}
 
