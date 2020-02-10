@@ -42,12 +42,14 @@
       Brand
     </a>
   
-    <button class="navbar-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <button class="navbar-toggler" type="button"
+    (click)="toggleNavbar()">
+<span class="navbar-toggler-icon"></span>
+</button>
   
   
-    <div class="collapse navbar-collapse">
+<div class="collapse navbar-collapse"
+[ngClass]="{ 'show': navbarOpen }">
       <ul class="navbar-nav mr-auto">
           
         <li class="nav-item">
@@ -74,7 +76,7 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             
         </form>
-        <li class="nav-item dropdown nav-user mr-sm-2" style="float:right;">
+        <li class=" dropdown ui-sm-2 nav-user mr-sm-2" style="float:right;">
             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="pi pi-ellipsis-v"></i></a>
             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                 <a class="dropdown-item" href="#"><i class="pi pi-users"></i>Account</a>
