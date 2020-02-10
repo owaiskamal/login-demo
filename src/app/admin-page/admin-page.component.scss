@@ -42,8 +42,18 @@
 
   /* sidenav */
   .nav-item a:hover{
-    color: #98c42e;
+    background-color: #98c42e;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.5;
+    margin: auto;
   }
+
+  .nav-item {
+    margin: auto;
+  }
+
+ 
   
   .main {
     margin-left: 200px; /* Same as the width of the sidenav */
@@ -53,10 +63,16 @@
   
 
 
+
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+  @media (max-width: 768px) {
+    .sidenav {
+        display: none;
+    }
+}
 
 /* footer */
 

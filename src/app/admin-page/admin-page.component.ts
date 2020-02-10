@@ -9,12 +9,16 @@ export class AdminPageComponent implements OnInit {
   items: MenuItem[];
   visibleSidebar1: boolean;
   constructor() { }
+  navbarOpen = false;
 
+ 
   ngOnInit() {
     
 
 }
-
+toggleNavbar() {
+  this.navbarOpen = !this.navbarOpen;
+}
 }
 
 
