@@ -7,10 +7,10 @@
       text-align: center;
       "
 >
-  <p-card >
+  <p-card>
     <p-header>
-      <h2 style="font-family:monospace; font-weight:bold;">Login</h2 >
-  </p-header>
+      <h2 style="font-family:monospace; font-weight:bold;">Login</h2>
+    </p-header>
     <div class="ui-g ui-fluid">
       <hr style="height:2px;width:100%;background-color:green;" />
       <form style="width:100%;" #myForm="ngForm">
@@ -18,25 +18,31 @@
           <div class="ui-md-3 ui-lg-3"></div>
           <div class="ui-md-6 ui-lg-6 ui-sm-12">
             <div class="ui-inputgroup">
-              <span class="ui-inputgroup-addon" style="width: 20%;"><i class="pi pi-user-edit" style="font-size: 1.5em;"></i></span>
-              <input type="text" required placeholder="Username" [(ngModel)]="userName" name="UserName" pInputText autofocus/>
+              <span class="ui-inputgroup-addon" style="width: 20%;"
+                ><i class="pi pi-user-edit" style="font-size: 1.5em;"></i
+              ></span>
+              <input
+                type="text"
+                required
+                placeholder="Username"
+                [(ngModel)]="userName"
+                name="UserName"
+                pInputText
+                autofocus
+              />
             </div>
           </div>
         </div>
-
-
 
         <div class="ui-g">
           <div class="ui-md-3 ui-lg-3"></div>
           <div class="ui-md-6 ui-lg-6 ui-sm-12">
             <div class="ui-inputgroup">
-
               <span class="ui-inputgroup-addon" style="width: 20%;">
                 <i class="pi pi-lock" style="font-size: 1.5em;"></i>
               </span>
 
               <input
-
                 type="password"
                 placeholder="Password"
                 required
@@ -47,7 +53,6 @@
             </div>
           </div>
         </div>
-
 
         <div class="ui-g">
           <div class="ui-md-3 ui-lg-3"></div>
@@ -63,18 +68,18 @@
           </div>
         </div>
         <div class="ui-g">
-            <div class="ui-md-3 ui-lg-3"></div>
-            <div class="ui-md-6 ui-lg-6 ui-sm-12">
-              <button
-                pButton
-                type="submit"
-                class="ui-button-info ui-button-rounded"
-                (click)="changePassword()"
-                label="Change Password"
-                style="margin-top: 0px;width:100%; font-weight: bold;"
-              ></button>
-            </div>
+          <div class="ui-md-3 ui-lg-3"></div>
+          <div class="ui-md-6 ui-lg-6 ui-sm-12">
+            <button
+              pButton
+              type="submit"
+              class="ui-button-info ui-button-rounded"
+              (click)="changePassword()"
+              label="Change Password"
+              style="margin-top: 0px;width:100%; font-weight: bold;"
+            ></button>
           </div>
+        </div>
       </form>
     </div>
   </p-card>
