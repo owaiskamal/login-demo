@@ -19,25 +19,28 @@
           <div class="ui-md-6 ui-lg-6 ui-sm-12">
             <div class="ui-inputgroup">
               <span class="ui-inputgroup-addon" style="width: 20%;"><i class="pi pi-user-edit" style="font-size: 1.5em;"></i></span>
-              <input type="text" required placeholder="Username" name="UserName" pInputText autofocus/>
+              <input type="text" required placeholder="Username" [(ngModel)]="userName" name="UserName" pInputText autofocus/>
             </div>
           </div>
         </div>
 
-        
+
 
         <div class="ui-g">
           <div class="ui-md-3 ui-lg-3"></div>
           <div class="ui-md-6 ui-lg-6 ui-sm-12">
             <div class="ui-inputgroup">
-              
+
               <span class="ui-inputgroup-addon" style="width: 20%;">
                 <i class="pi pi-lock" style="font-size: 1.5em;"></i>
               </span>
+
               <input
+
                 type="password"
                 placeholder="Password"
                 required
+                [(ngModel)]="password"
                 name="Password"
                 pInputText
               />
@@ -45,7 +48,7 @@
           </div>
         </div>
 
-       
+
         <div class="ui-g">
           <div class="ui-md-3 ui-lg-3"></div>
           <div class="ui-md-6 ui-lg-6 ui-sm-12">

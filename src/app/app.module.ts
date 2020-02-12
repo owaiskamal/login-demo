@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AdminPageComponent } from './admin-page/admin-page.component';
 
 
@@ -55,7 +55,8 @@ import { LoginSecuritiesPageComponent } from './login-securities-page/login-secu
     BrowserAnimationsModule,
     PasswordModule,
 
-    CheckboxModule
+    CheckboxModule,
+    HttpClientModule
 
 
   ],
