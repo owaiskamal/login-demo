@@ -18,20 +18,37 @@ export class LoginPageComponent implements OnInit {
   password: string;
   ngOnInit() {}
 
-  loginUser() {
+
+     msg = [];
+     jso = [{
+       STATUS : '0;Invalid User ID and Password'
+     }]
+    loginUser() {
     this.authService.userAuth(this.userName, this.password).subscribe(res => {
-      console.log("user", res);
-      var msg = res;
-      if (msg[0]["STATUS"] == "0;Invalid User ID and Password") {
-        console.log("error");
+
+
+      //var kol = JSON.stringify(this.jso);
+      console.log(res[0].STATUS);
+      console.log(this.jso)
+
+      if (res[0].STATUS == "0;Invalid User ID and Password") {
+
+
+
+        this.messageService.add({
+          severity: "error",
+          summary: "Login Failed",
+          detail: "Enter correct username and password"
+        });
+
       } else {
         this.messageService.add({
           severity: "success",
           summary: "Login Successfully",
           detail: "Welcome User"
         });
-        setTimeout(() => {
-          this.router.navigateByUrl("/adminpage");
+         setTimeout(() => {
+           this.router.navigateByUrl("/adminpage");
         }, 2000);
       }
     });
