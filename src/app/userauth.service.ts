@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 @Injectable({
@@ -7,13 +7,15 @@ import { environment } from "src/environments/environment";
 })
 export class UserauthService {
   constructor(private http: HttpClient) {}
-
+  header : any;
   userAuth(UserId, Password): Observable<any> {
     let user = {
       UserId,
       Password
     };
+    const headerSettings: {[name: string]: string | string[]; } = {};
+    this.header = new HttpHeaders(headerSettings);
 
-    return this.http.post(environment.baseUrl + "UserLogin", user);
+    return this.http.post<any>(environment.baseUrl + "UserLogin", user);
   }
 }
