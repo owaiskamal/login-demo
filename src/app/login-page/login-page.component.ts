@@ -19,17 +19,13 @@ export class LoginPageComponent implements OnInit {
   ngOnInit() {}
 
 
-     msg = [];
-     jso = [{
-       STATUS : '0;Invalid User ID and Password'
-     }]
-    loginUser() {
+     loginUser() {
     this.authService.userAuth(this.userName, this.password).subscribe(res => {
 
 
       //var kol = JSON.stringify(this.jso);
       console.log(res[0].STATUS);
-      console.log(this.jso)
+
 
       if (res[0].STATUS == "0;Invalid User ID and Password") {
 
@@ -38,10 +34,20 @@ export class LoginPageComponent implements OnInit {
         this.messageService.add({
           severity: "error",
           summary: "Login Failed",
-          detail: "Enter correct username and password"
+          detail: "Invalid User ID and Password"
         });
 
-      } else {
+      }
+      else if (res[0].STATUS == "0;User Has been locked, Please Contact to your Administrator")
+      {
+        this.messageService.add({
+          severity: "error",
+          summary: "Login Failed",
+          detail: "User Has been locked, Please Contact to your Administrator"
+        });
+
+      }
+       else {
         this.messageService.add({
           severity: "success",
           summary: "Login Successfully",
